@@ -1,0 +1,85 @@
+{
+  "id": "5fb07c96-d22b-42d5-86b2-b0fe89e2eb87",
+  "version": "2.0",
+  "name": "Validación de titulo",
+  "url": "https://www.imdb.com/?ref_=nv_home",
+  "tests": [{
+    "id": "3d700d08-6055-411a-abe1-03b2a2675a4a",
+    "name": "prueba",
+    "commands": [{
+      "id": "28b811a7-ff5b-4d3e-ae05-20f0ddab12dc",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=nv_home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e66431d-cae5-422d-94b0-93ad16b20f40",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2da8f975-2d3a-43ce-9e5d-f81ad94b9aac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=News",
+      "targets": [
+        ["linkText=News", "linkText"],
+        ["css=#navNewsMenu > .navCategory > a:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'News')])[2]", "xpath:link"],
+        ["xpath=//li[@id='navNewsMenu']/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/news/top?ref_=nv_tp_nw')]", "xpath:href"],
+        ["xpath=//li[6]/p/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06f47d27-bfe9-4fbd-8936-9b5e7a41f6fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=DC Universe Cancels \"Swamp Thing\" Less Than 1 Week After Premiere",
+      "targets": [
+        ["linkText=DC Universe Cancels \"Swamp Thing\" Less Than 1 Week After Premiere", "linkText"],
+        ["css=.ipl-zebra-list__item:nth-child(4) .news-article__title > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'DC Universe Cancels \"Swamp Thing\" Less Than 1 Week After Premiere')])[2]", "xpath:link"],
+        ["xpath=//section[@id='news-article-list']/article[3]/header/h2/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/offsite/?page-action=offsite-thewrap&token=BCYgYld3HDosXsdd9rCqjFTd6Om22PU5hUqsNIa6ZnWUAoSdpExXALKlC99n3VpKAdg_WLPG6hSJ%0D%0Atk57aFMNAbNE7cICFlXjLp5Alqlg9KGpxa-PMl6k2N_xcepvBCC07k8SS9eZ7GZRvcCBssVRg-6D%0D%0Adda1CZAFuDR6terogEOkDFcSOG2ojIM4tFJQj2ji6a88zcYj32E_5L1BFWJxGNz18neua6ZHMzyh%0D%0A13PfZ2hQ0YA%0D%0A&ref_=nwc_art_hd')]", "xpath:href"],
+        ["xpath=//article[3]/header/h2/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1689",
+      "windowTimeout": 2000
+    }, {
+      "id": "c4a496ac-46e7-4c14-9913-56a3f2d2a5c7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1689}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae0b6dd8-2b9a-4a4b-85c9-32d2a856c976",
+      "comment": "",
+      "command": "click",
+      "target": "css=.article-header > .title",
+      "targets": [
+        ["css=.article-header > .title", "css:finder"],
+        ["xpath=//div[@id='js-wrap-scroll-articles']/article/header/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'DC Universe Cancels ‘Swamp Thing’ Less Than 1 Week After Premiere')]", "xpath:innerText"]
+      ],
+      "value": "DC Universe Cancels ‘Swamp Thing’ Less Than 1 Week After Premiere"
+    }]
+  }],
+  "suites": [{
+    "id": "3633971b-5cc9-47b2-9087-bd599ae09898",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3d700d08-6055-411a-abe1-03b2a2675a4a"]
+  }],
+  "urls": ["https://www.imdb.com/?ref_=nv_home"],
+  "plugins": []
+}
